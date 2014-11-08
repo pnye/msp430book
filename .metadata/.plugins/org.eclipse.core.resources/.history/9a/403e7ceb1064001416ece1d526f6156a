@@ -1,0 +1,16 @@
+#include <msp430.h>
+
+// Pins for LEDs
+#define red_LED     BIT0
+#define green_LED   BIT6
+
+/*
+ * main.c
+ */
+int main(void) {
+    WDTCTL = WDTPW | WDTHOLD;	 // Stop watchdog timer
+	
+    P1OUT = red_LED;            // Preload red LED on, green LED off
+    P1DIR = red_LED|green_LED
+	return 0;
+}

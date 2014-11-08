@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1415195497754_8" label="chapter4" name="chapter4">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/flshasm3" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/timrled1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/butled1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/flsubsam" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/flashled" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/btnasm1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/flshasm4" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/butled2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ledson" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/random1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/button2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ledson_assm" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/morsasm2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/flshasm1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/flshasm2" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1403214952490_0" label="Window Working Set" name="Aggregate for window 1403214952489"/>
+<mruList name="chapter4"/>
+</workingSetManager>
