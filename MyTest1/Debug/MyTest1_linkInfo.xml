@@ -2,9 +2,13 @@
 <link_info>
    <banner>MSP430 Linker PC v4.3.5</banner>
    <copyright>Copyright (c) 2003-2014 Texas Instruments Incorporated</copyright>
-   <link_time>0x547062f3</link_time>
+   <link_time>0x54706e70</link_time>
    <link_errors>0x0</link_errors>
    <output_file>MyTest1.out</output_file>
+   <entry_point>
+      <name>RESET</name>
+      <address>0xc000</address>
+   </entry_point>
    <input_file_list>
       <input_file id="fl-2">
          <path>.\</path>
@@ -1469,6 +1473,11 @@
       <symbol id="sm-67">
          <name>__c_args__</name>
          <value>0xffffffff</value>
+      </symbol>
+      <symbol id="sm-9e">
+         <name>RESET</name>
+         <value>0xc000</value>
+         <object_component_ref idref="oc-3d"/>
       </symbol>
       <symbol id="sm-a1">
          <name>__TI_int00</name>

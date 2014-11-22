@@ -14,6 +14,8 @@ DelaySize	.equ	R12
 LoopCounter	.equ	R4
 ;-------------------------------------------------------------------------------
             .text                           ; Assemble into program memory
+            .global RESET                   ; Define entry point
+
             .retain                         ; Override ELF conditional linking
                                             ; and retain current section
             .retainrefs                     ; Additionally retain any sections
