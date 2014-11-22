@@ -51,7 +51,7 @@ CopyTest:
 ; Segment for constant data in ROM
 SourceStr:                                  ; String constant, stored
 											; between 0xC000 and 0xFFFF
-            .string "hello, world\n"        ; "" causes a '\0' to be appended
+            .string "Hello World"        	; "" causes a '\0' to be appended
 
 ;-------------------------------------------------------------------------------
 ;           Stack Pointer definition

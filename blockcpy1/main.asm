@@ -28,8 +28,7 @@ FillRAM:
             jlo     FillRAM                 ; Repeat loop while
             								; fillDestination < end of RAM
 
-			mov.w   #SourceStr,R14          ; Load address of source
-            mov.w   #DestStr ,R12           ; Load address of destination
+			mov.w   #BeginSource,R14        ; Load address of source
             call    #MyStrCpy               ; Copy string (don't forget #!)
             jmp     $                       ; Infinite , empty loop
 
@@ -40,19 +39,24 @@ FillRAM:
 MyStrCpy:
             jmp     CopyTest
 CopyLoop:
-            inc.w   R12               ; [1 word , 1 cycle] inc dst address
+; This ought to be sufficient but the assembler complains...
+			;mov.b   BeginSource,R6
+			;sub.b	DestStr,R6
+			;mov.b	@R14+,R6	; -1 allows for @R1+
+; ...so I had to handle the wrapping around myself
+			;mov.b	@R14+,R6
+									; 0xFFFF allows for increment in @R1+
 CopyTest:
-            tst.b   0(R14)            ; [2 words , 4 cycles] test source
-            mov.b   @R14+,0(R12)      ; [2 words , 5 cycles] copy src -> dst
-            jnz     CopyLoop          ; [1 word , 2 cycles] continue if not \0
-            ret                       ; Yes: return to caller
+            cmp.w	#EndSource+14,R14	; Set flags for (R14 - end of source)
+            jlo		CopyLoop
+            ret                     ; Yes: return to caller
 ;-----------------------------------------------------------------------
 
 ; Segment for constant data in ROM
-SourceStr:                                  ; String constant, stored
+BeginSource:                                ; String constant, stored
 											; between 0xC000 and 0xFFFF
             .string "hello, world\n"        ; "" causes a '\0' to be appended
-
+EndSource:
 ;-------------------------------------------------------------------------------
 ;           Stack Pointer definition
 ;-------------------------------------------------------------------------------

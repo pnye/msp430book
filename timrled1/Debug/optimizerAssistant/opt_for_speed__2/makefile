@@ -108,40 +108,40 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-blockcpy1.out \
+timrled1.out \
 
 EXE_OUTPUTS__QUOTED += \
-"blockcpy1.out" \
+"timrled1.out" \
 
 BIN_OUTPUTS += \
-blockcpy1.hex \
+timrled1.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"blockcpy1.hex" \
+"timrled1.hex" \
 
 
 # All Target
-all: blockcpy1.out
+all: timrled1.out
 
 # Tool invocations
-blockcpy1.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+timrled1.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MSP430 Linker'
-	"c:/ti/ccsv6/tools/compiler/msp430_4.3.5/bin/cl430" -vmsp --abi=eabi -Ooff --advice:power=all -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"blockcpy1.map" --heap_size=0 --stack_size=0 -i"c:/ti/ccsv6/ccs_base/msp430/include" -i"c:/ti/ccsv6/tools/compiler/msp430_4.3.5/lib" -i"c:/ti/ccsv6/tools/compiler/msp430_4.3.5/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="blockcpy1_linkInfo.xml" --entry_point=RESET -o "blockcpy1.out" $(ORDERED_OBJS)
+	"c:/ti/ccsv6/tools/compiler/msp430_4.3.5/bin/cl430" -vmsp --abi=eabi --opt_for_speed=2 --advice:power=all -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"timrled1.map" --heap_size=80 --stack_size=80 -i"c:/ti/ccsv6/ccs_base/msp430/include" -i"c:/ti/ccsv6/tools/compiler/msp430_4.3.5/lib" -i"c:/ti/ccsv6/tools/compiler/msp430_4.3.5/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="timrled1_linkInfo.xml" --rom_model -o "timrled1.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-blockcpy1.hex: $(EXE_OUTPUTS)
+timrled1.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: MSP430 Hex Utility'
-	"c:/ti/ccsv6/tools/compiler/msp430_4.3.5/bin/hex430" --memwidth=8 --romwidth=8 -o "blockcpy1.hex" $(EXE_OUTPUTS__QUOTED)
+	"c:/ti/ccsv6/tools/compiler/msp430_4.3.5/bin/hex430" --memwidth=8 --romwidth=8 -o "timrled1.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)$(BIN_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" 
 	-$(RM) "main.pp" 
+	-$(RM) "main.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

@@ -18,7 +18,7 @@ int main(void) {
 // Continous up mode, divide closk by 8, closk from SMCLK, clear timer
     for (;;){                   // Loop forever
         while ((TACTL & TAIFG) == 0){   // Wait for overflow
-            }                           //    doing nothing
+            }                           // doing nothing
         TACTL &= ~TAIFG;                // Clear overflow flag
         P1OUT ^= red_LED|green_LED;     // Toggle LEDs
     }                                   // Back around infinite loop
