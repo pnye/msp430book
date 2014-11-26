@@ -7,13 +7,13 @@
 
 red_LED		.equ	BIT0
 
-;Iterations of delay loop for about 0.1s (3 cycles/iteration)
-DELAYLOOPS	.equ	27000
-
 DelaySize	.equ	R12
-LoopCounter	.equ	R4
+
+;Iterations of delay loop for about 0.1s (3 cycles/iteration)
+BIGLOOPS	.equ	130
+LITTLELOOPS	.equ	100
 ;-------------------------------------------------------------------------------
-			.title "MyTest1"
+			.title "substk1"
 			.text                           ; Assemble into program memory
             .retain                         ; Override ELF conditional linking
                                             ; and retain current section
@@ -40,19 +40,24 @@ InfLoop:
 ; Works correcly if DelaySize = 0: the test is executed first as in while(){}
 ;-------------------------------------------------------------------------------
 DelayTenths:
-			push.w	LoopCounter				; Stack R4: will be overwritten
+			sub.w	#4,SP 			; Allocate two words (4 bytes ) on stack
 			jmp		LoopTest				; Start with test in case DelaySize
 											; equals 0
 OuterLoop:
-			mov.w	#DELAYLOOPS,LoopCounter	; Initialize loop counter
-DelayLoop:									; [Clock cycles in brackets]
-			dec.w	LoopCounter				; Decrement loop counter  [1]
-			jnz		DelayLoop				; Repeat loop if not zero [2]
-			dec.w	DelaySize				; Decrement number of 0.1 delays
+			mov.w	#BIGLOOPS,2(SP)			; Initialize big loop counter
+BigLoop:
+			mov.w	#LITTLELOOPS,0(SP)		; Initialize little loop counter
+LittleLoop:									; [Clock cycles in brackets]
+			dec.w	0(SP)					; Decrement little loop counter [4]
+			jnz		LittleLoop				; Repeat loop if not zero 		[2]
+			dec.w	2(SP)					; Decrement big loop counter	[4]
+			jnz		BigLoop					; Repeat loop if not zero		[2]
+			dec.w	DelaySize				; Decrement number of 0.1s delays
 LoopTest:
 			cmp.w	#0,DelaySize			; Finished number of 0.1s delays
 			jnz		OuterLoop				; No: go around delay loop again
-			pop.w	LoopCounter				; Yes: restore R4 before returning
+			add.w	#4, SP					; Yes: finished, release space on
+											; stack
 			ret
 
 ;-------------------------------------------------------------------------------
