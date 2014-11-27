@@ -1,4 +1,4 @@
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE    1
@@ -58,7 +58,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A    47                       .define "(0x400)",ADC10SR 
  A    48                       .define "(0x0008)",ADC10SSEL0 
  A    49                       .define "(0x0010)",ADC10SSEL1 
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE    2
@@ -118,7 +118,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   102                       .define "(0x08)",CAPD3 
  A   103                       .define "(0x10)",CAPD4 
  A   104                       .define "(0x20)",CAPD5 
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE    3
@@ -178,7 +178,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   157                       .define "(0x10)",DIVA_1 
  A   158                       .define "(0x20)",DIVA_2 
  A   159                       .define "(0x30)",DIVA_3 
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE    4
@@ -238,7 +238,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   212                       .define "(4*0x1000u)",INCH_4 
  A   213                       .define "(5*0x1000u)",INCH_5 
  A   214                       .define "(6*0x1000u)",INCH_6 
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE    5
@@ -298,7 +298,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   267                       .define "(0x08)",P2CA1 
  A   268                       .define "(0x10)",P2CA2 
  A   269                       .define "(0x20)",P2CA3 
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE    6
@@ -358,7 +358,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   322                       .define "(0x0002)",TA1IV_TACCR1 
  A   323                       .define "(0x0004)",TA1IV_TACCR2 
  A   324                       .define "(0x000A)",TA1IV_TAIFG 
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE    7
@@ -418,7 +418,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   377                       .define "(0x10)",UCBRF0 
  A   378                       .define "(0x20)",UCBRF1 
  A   379                       .define "(0x40)",UCBRF2 
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE    8
@@ -478,7 +478,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   432                       .define "(0x08)",UCIRTXPL1 
  A   433                       .define "(0x10)",UCIRTXPL2 
  A   434                       .define "(0x20)",UCIRTXPL3 
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE    9
@@ -538,7 +538,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   487                       .define "(0x04)",UCSTPIFG 
  A   488                       .define "(0x02)",UCSTTIE 
  A   489                       .define "(0x02)",UCSTTIFG 
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE   10
@@ -598,7 +598,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   542                       .define "(0x40)",XT2S_1 
  A   543                       .define "(0x80)",XT2S_2 
  A   544                       .define "(0xC0)",XT2S_3 
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE   11
@@ -609,7 +609,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   548                       .define "1",_OPTIMIZE_FOR_SPACE 
  A   549                       .define "1",__ASM_HEADER__ 
  A   550                       .define "4004000",__COMPILER_VERSION__ 
- A   551                       .define """Nov 26 2014""",__DATE__ 
+ A   551                       .define """Nov 27 2014""",__DATE__ 
  A   552                       .define "int",__EDG_PTRDIFF_TYPE__ 
  A   553                       .define "unsigned int",__EDG_SIZE_TYPE__ 
  A   554                       .define "404",__EDG_VERSION__ 
@@ -635,7 +635,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   574                       .define "unsigned",__SIZE_T_TYPE__ 
  A   575                       .define "199409L",__STDC_VERSION__ 
  A   576                       .define "1",__STDC__ 
- A   577                       .define """03:06:39""",__TIME__ 
+ A   577                       .define """03:17:07""",__TIME__ 
  A   578                       .define "4004000",__TI_COMPILER_VERSION__ 
  A   579                       .define "1",__TI_EABI__ 
  A   580                       .define "1",__TI_GNU_ATTRIBUTE_SUPPORT__ 
@@ -658,7 +658,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   597                       .global IFG1         
  A   598                       .global IE2          
  A   599                       .global IFG2         
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE   12
@@ -718,7 +718,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
  A   652                       .global TA1CCTL0     
  A   653                       .global TA1CCTL1     
  A   654                       .global TA1CCTL2     
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 ../main.asm                                                          PAGE   13
@@ -778,7 +778,7 @@ Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
       21                                                        ; that have references to current
       22                                                        ; section
       23            
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 substk1                                                              PAGE   14
@@ -838,7 +838,7 @@ substk1                                                              PAGE   14
       60 000048 5221                          add.w   #4, SP                                  ; Yes: finished, release space
       61                                                                                                    ; stack
       62 00004a 4130                          ret
-MSP430 Assembler PC v4.4.0 Wed Nov 26 03:06:39 2014
+MSP430 Assembler PC v4.4.0 Thu Nov 27 03:17:07 2014
 
 Tools Copyright (c) 2003-2014 Texas Instruments Incorporated
 substk1                                                              PAGE   15
