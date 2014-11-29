@@ -8,7 +8,7 @@
 red_LED		.equ	BIT0
 green_LED	.equ	BIT6
 
-UpModePeriod	.equ	4999				; Period for up mode
+UpModePeriod	.equ	49999				; Period for up mode
 ;-------------------------------------------------------------------------------
             .text                           ; Assemble into program memory
             .retain                         ; Override ELF conditional linking
@@ -17,17 +17,23 @@ UpModePeriod	.equ	4999				; Period for up mode
                                             ; that have references to current
                                             ; section
 ;-------------------------------------------------------------------------------
-RESET       mov.w   #__STACK_END,SP         ; Initialize stackpointer
-StopWDT     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
+RESET:       mov.w   #__STACK_END,SP         ; Initialize stackpointer
+StopWDT:     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
 
+SetupLEDs:
 			mov.b	#red_LED,&P1OUT			; Preload red_led on, green_led off
 			bis.b	#red_LED|green_LED,&P1DIR	; Set red and green led to output
-			mov.w	#49999,&TACCR0	; Period for up mode
+
+EnableInterrupt:
+			mov.w	#UpModePeriod,&TACCR0	; Period for up mode
 			mov.w	#CCIE,&TACCTL0			; Enable interrupts on compare 0
 			mov.w	#MC_1|ID_3|TASSEL_2|TACLR,&TACTL	; Set up Timer A
 ;	UP mode, divide clock by 8, clock from SMCLK, clear TAR
 			bis.w	#GIE,SR					; Enable interrupts (just TACCR0)
+
+EndlessLoop:
 			jmp		$						; Loop forever; interrupts do all
+
 ;-------------------------------------------------------------------------------
 ; Interrupt service routine for TACCR0, called when TAR = TACCR0
 ; No need to acknowledge interrupt explicitly - done automatically

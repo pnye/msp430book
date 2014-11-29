@@ -2,7 +2,7 @@
 <link_info>
    <banner>MSP430 Linker PC v4.4.0</banner>
    <copyright>Copyright (c) 2003-2014 Texas Instruments Incorporated</copyright>
-   <link_time>0x547748aa</link_time>
+   <link_time>0x54785ac9</link_time>
    <link_errors>0x0</link_errors>
    <output_file>timrint1.out</output_file>
    <entry_point>
@@ -1468,77 +1468,77 @@
          <name>__c_args__</name>
          <value>0xffffffff</value>
       </symbol>
-      <symbol id="sm-9e">
+      <symbol id="sm-a1">
          <name>RESET</name>
          <value>0xc000</value>
          <object_component_ref idref="oc-31"/>
       </symbol>
-      <symbol id="sm-9f">
+      <symbol id="sm-a2">
          <name>__TI_int09</name>
          <value>0xfff2</value>
          <object_component_ref idref="oc-32"/>
       </symbol>
-      <symbol id="sm-a3">
+      <symbol id="sm-a6">
          <name>__TI_int00</name>
          <value>0xffe0</value>
          <object_component_ref idref="oc-37"/>
       </symbol>
-      <symbol id="sm-a6">
+      <symbol id="sm-a9">
          <name>__TI_int02</name>
          <value>0xffe4</value>
          <object_component_ref idref="oc-38"/>
       </symbol>
-      <symbol id="sm-a9">
+      <symbol id="sm-ac">
          <name>__TI_int03</name>
          <value>0xffe6</value>
          <object_component_ref idref="oc-39"/>
       </symbol>
-      <symbol id="sm-ac">
+      <symbol id="sm-af">
          <name>__TI_int05</name>
          <value>0xffea</value>
          <object_component_ref idref="oc-3a"/>
       </symbol>
-      <symbol id="sm-af">
+      <symbol id="sm-b2">
          <name>__TI_int06</name>
          <value>0xffec</value>
          <object_component_ref idref="oc-3b"/>
       </symbol>
-      <symbol id="sm-b2">
+      <symbol id="sm-b5">
          <name>__TI_int07</name>
          <value>0xffee</value>
          <object_component_ref idref="oc-3c"/>
       </symbol>
-      <symbol id="sm-b5">
+      <symbol id="sm-b8">
          <name>__TI_int08</name>
          <value>0xfff0</value>
          <object_component_ref idref="oc-3d"/>
       </symbol>
-      <symbol id="sm-b8">
+      <symbol id="sm-bb">
          <name>__TI_int10</name>
          <value>0xfff4</value>
          <object_component_ref idref="oc-3e"/>
       </symbol>
-      <symbol id="sm-bb">
+      <symbol id="sm-be">
          <name>__TI_int11</name>
          <value>0xfff6</value>
          <object_component_ref idref="oc-3f"/>
       </symbol>
-      <symbol id="sm-be">
+      <symbol id="sm-c1">
          <name>__TI_int12</name>
          <value>0xfff8</value>
          <object_component_ref idref="oc-40"/>
       </symbol>
-      <symbol id="sm-c1">
+      <symbol id="sm-c4">
          <name>__TI_int13</name>
          <value>0xfffa</value>
          <object_component_ref idref="oc-41"/>
       </symbol>
-      <symbol id="sm-c4">
+      <symbol id="sm-c7">
          <name>__TI_int14</name>
          <value>0xfffc</value>
          <object_component_ref idref="oc-42"/>
       </symbol>
-      <symbol id="sm-cc">
+      <symbol id="sm-cf">
          <name>__TI_ISR_TRAP</name>
          <value>0xc032</value>
          <object_component_ref idref="oc-46"/>
