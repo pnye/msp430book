@@ -11,16 +11,18 @@
 void main(void) {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 
-    // set up red and green LEDs
+    // Set up red and green LEDs
     P1OUT = red_LED;            // Preload red LED on, green off
     P1DIR = red_LED|green_LED;  // Set pins with LEDs to output
 
-
+    // Set up Timer A
     TACCR0 = 49999;             // Upper limit of count for TAR
     TACCTL0 = CCIE;             // Enable interrupts on Compare 0
-    TACTL = TASSEL_2|MC_1|ID_3;
-    // SMCLK, Up mode: the timer counts up to TACCR0, divide input by 8
+    TACTL = TASSEL_2|MC_1|ID_3|TACLR; // Set up Timer A
+    // SMCLK, Up mode: the timer counts up to TACCR0, divide input by 8,
+    // clear TAR, count divider and count direction
 
+    // Start 'er up
     __enable_interrupt();       // Enable interrupts (intrinsic)
     for (;;){                   // Loop forever
     }
