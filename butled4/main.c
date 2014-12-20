@@ -17,8 +17,8 @@ void main (void)
     WDTCTL = WDTPW | WDTHOLD;   // Stop watchdog timer
 
     // Terminate unused ports
-    P2DIR = 0xFF;
-    P2OUT = 0x00;
+    P2DIR = 0xFF;               // Set all pins as inputs
+    P2OUT = 0x00;               // Set output low
     P3DIR = 0xFF;
     P3OUT = 0x00;
 
